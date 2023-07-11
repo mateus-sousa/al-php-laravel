@@ -1,0 +1,27 @@
+Criar tabela Jobs
+php artisan queue:table
+
+Criar tabela de Jobs Falhados
+php artisan queue:failed_table
+
+Lista Jobs falhados
+php artisan queue:failed
+
+Executar Jobs:
+Em dev
+php artisan queue:listen tries={quantidade de tentativas}
+
+Em prod
+php artisan queue:work
+
+Devolver job falhado para tabela de jobs
+php artisan queue:retry {id do job desejado ou digitar all para restaurar todos}
+
+Entrar no console de consultas ao banco
+php artisan tinker
+
+Criar evento
+php artisan make:event {Nome do Evento}
+
+Criar Listener
+php artisan make:listener {Nome do Listener} -e {Nome do evento que ele escuta}
